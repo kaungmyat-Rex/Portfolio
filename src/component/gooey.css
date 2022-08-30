@@ -1,0 +1,75 @@
+.hambar {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+
+  cursor: pointer;
+
+  margin-left: 450px;
+  margin-top: 20px;
+}
+
+.normal {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 7px;
+  margin: 7px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.normal:nth-of-type(1) {
+  width: 50%;
+}
+
+.normal:nth-of-type(2) {
+  width: 100%;
+}
+
+.normal:nth-of-type(3) {
+  width: 75%;
+}
+
+.hambar-input[type="checkbox"] {
+  display: none;
+}
+
+.span-dark {
+  background-color: #303133;
+}
+
+.hambar-input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(8px, 0px);
+  background: #c93359f5;
+}
+
+.hambar-input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+  background: #c93359f5;
+}
+
+.hambar-input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 45%;
+  transform: translate(30px, -11px) rotatez(45deg);
+  background: #c93359f5;
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1235px) {
+  .hambar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1220px) and (min-width: 1000px) {
+  .hambar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 999px) and (min-width: 768px) {
+  .hambar {
+    margin-left: 740px;
+  }
+}
